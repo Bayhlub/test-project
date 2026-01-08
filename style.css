@@ -684,21 +684,26 @@ img {
     background: var(--primary-gradient);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    padding: 4px;
+    box-shadow:
+        0 20px 60px rgba(102, 126, 234, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
 }
 
-.frame-decoration {
-    position: absolute;
-    inset: 4px;
-    background: var(--bg-dark);
-    border-radius: var(--radius-md);
+.image-frame:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 30px 80px rgba(102, 126, 234, 0.4),
+        0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-.frame-decoration::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23667eea' d='M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.5,-0.9C87,14.5,81.4,28.9,73.1,41.6C64.8,54.3,53.9,65.2,40.8,72.1C27.7,79,12.3,81.9,-2.8,80.5C-17.9,79.1,-35.8,73.4,-50.6,64.2C-65.4,55,-77,42.3,-83.3,27.3C-89.6,12.3,-90.6,-5,-85.8,-20.5C-81,-36,-70.4,-49.6,-57,-58.9C-43.6,-68.1,-27.3,-73,-11.2,-75.1C4.9,-77.2,30.6,-83.6,44.7,-76.4Z' transform='translate(100 100)' /%3E%3C/svg%3E") center/cover no-repeat;
-    opacity: 0.3;
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: calc(var(--radius-lg) - 4px);
 }
 
 /* ===================================
