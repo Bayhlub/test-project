@@ -25,12 +25,28 @@
             <span class="logo-dot"></span>
         </div>
         <ul class="nav-links">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="active" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#work" data-i18n="nav.work">Work</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
-        <button class="nav-cta">Let's Talk</button>
+        <button class="nav-cta" data-i18n="nav.cta">Let's Talk</button>
+        <div class="lang-switcher">
+            <button class="lang-btn" id="langBtn">
+                <span class="lang-current">EN</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <button class="lang-option active" data-lang="en">
+                    <span>🇺🇸</span> English
+                </button>
+                <button class="lang-option" data-lang="lo">
+                    <span>🇱🇦</span> ພາສາລາວ
+                </button>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -38,22 +54,27 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="pulse"></span>
-                <span>Available for projects</span>
+                <span data-i18n="hero.badge">Available for projects</span>
             </div>
             <h1 class="hero-title">
-                <span class="line">Hello, I'm</span>
+                <span class="line" data-i18n="hero.greeting">Hello, I'm</span>
                 <span class="line gradient-text">Bai</span>
             </h1>
-            <p class="hero-subtitle">Crafting digital experiences that inspire, engage, and transform ideas into reality
+            <div class="hero-avatar">
+                <div class="avatar-glow"></div>
+                <img src="profile.jpg" alt="Bai's Profile Picture" class="avatar-image">
+            </div>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Crafting digital experiences that inspire, engage, and
+                transform ideas into reality
             </p>
             <div class="hero-buttons">
                 <a href="#work" class="btn btn-primary">
-                    <span>View My Work</span>
+                    <span data-i18n="hero.btn.work">View My Work</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="hero.btn.contact">Get In Touch</a>
             </div>
         </div>
         <div class="hero-visual">
@@ -63,19 +84,19 @@
                     <div class="stats-grid">
                         <div class="stat-item">
                             <span class="stat-number" data-count="50">0</span>
-                            <span class="stat-label">Projects</span>
+                            <span class="stat-label" data-i18n="stats.projects">Projects</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-count="5">0</span>
-                            <span class="stat-label">Years Exp</span>
+                            <span class="stat-label" data-i18n="stats.years">Years Exp</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-count="30">0</span>
-                            <span class="stat-label">Clients</span>
+                            <span class="stat-label" data-i18n="stats.clients">Clients</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-count="100">0</span>
-                            <span class="stat-label">% Passion</span>
+                            <span class="stat-label" data-i18n="stats.passion">% Passion</span>
                         </div>
                     </div>
                 </div>
@@ -86,19 +107,21 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="section-header">
-            <span class="section-tag">About Me</span>
-            <h2 class="section-title">Passionate Creator & <span class="gradient-text">Problem Solver</span></h2>
+            <span class="section-tag" data-i18n="about.tag">About Me</span>
+            <h2 class="section-title" data-i18n="about.title">Passionate Creator & <span class="gradient-text"
+                    data-i18n="about.title.highlight">Problem Solver</span></h2>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <p>I believe in the power of design and technology to create meaningful experiences. Every project is an
+                <p data-i18n="about.description">I believe in the power of design and technology to create meaningful
+                    experiences. Every project is an
                     opportunity to push boundaries and deliver excellence.</p>
                 <div class="skills-container">
-                    <div class="skill-tag">Design</div>
-                    <div class="skill-tag">Development</div>
-                    <div class="skill-tag">Strategy</div>
-                    <div class="skill-tag">Innovation</div>
-                    <div class="skill-tag">Creativity</div>
+                    <div class="skill-tag" data-i18n="skills.design">Design</div>
+                    <div class="skill-tag" data-i18n="skills.development">Development</div>
+                    <div class="skill-tag" data-i18n="skills.strategy">Strategy</div>
+                    <div class="skill-tag" data-i18n="skills.innovation">Innovation</div>
+                    <div class="skill-tag" data-i18n="skills.creativity">Creativity</div>
                 </div>
             </div>
             <div class="about-image">
@@ -112,41 +135,75 @@
     <!-- Work Section -->
     <section class="work" id="work">
         <div class="section-header">
-            <span class="section-tag">Featured Work</span>
-            <h2 class="section-title">Projects That <span class="gradient-text">Inspire</span></h2>
+            <span class="section-tag" data-i18n="work.tag">Featured Work</span>
+            <h2 class="section-title" data-i18n="work.title">Projects That <span class="gradient-text"
+                    data-i18n="work.title.highlight">Inspire</span></h2>
         </div>
         <div class="projects-grid">
             <article class="project-card">
                 <div class="project-image project-1"></div>
                 <div class="project-info">
-                    <span class="project-category">Web Design</span>
-                    <h3 class="project-title">E-Commerce Platform</h3>
-                    <p class="project-desc">A modern shopping experience with seamless UX</p>
+                    <span class="project-category" data-i18n="project1.category">Web Design</span>
+                    <h3 class="project-title" data-i18n="project1.title">E-Commerce Platform</h3>
+                    <p class="project-desc" data-i18n="project1.desc">A modern shopping experience with seamless UX</p>
                 </div>
                 <div class="project-overlay">
-                    <a href="#" class="project-link">View Project</a>
+                    <a href="#" class="project-link" data-i18n="project.view">View Project</a>
                 </div>
             </article>
             <article class="project-card">
                 <div class="project-image project-2"></div>
                 <div class="project-info">
-                    <span class="project-category">Branding</span>
-                    <h3 class="project-title">Brand Identity</h3>
-                    <p class="project-desc">Complete visual identity transformation</p>
+                    <span class="project-category" data-i18n="project2.category">Branding</span>
+                    <h3 class="project-title" data-i18n="project2.title">Brand Identity</h3>
+                    <p class="project-desc" data-i18n="project2.desc">Complete visual identity transformation</p>
                 </div>
                 <div class="project-overlay">
-                    <a href="#" class="project-link">View Project</a>
+                    <a href="#" class="project-link" data-i18n="project.view">View Project</a>
                 </div>
             </article>
             <article class="project-card">
                 <div class="project-image project-3"></div>
                 <div class="project-info">
-                    <span class="project-category">Mobile App</span>
-                    <h3 class="project-title">Fitness Tracker</h3>
-                    <p class="project-desc">Health and wellness at your fingertips</p>
+                    <span class="project-category" data-i18n="project3.category">Mobile App</span>
+                    <h3 class="project-title" data-i18n="project3.title">Fitness Tracker</h3>
+                    <p class="project-desc" data-i18n="project3.desc">Health and wellness at your fingertips</p>
                 </div>
                 <div class="project-overlay">
-                    <a href="#" class="project-link">View Project</a>
+                    <a href="#" class="project-link" data-i18n="project.view">View Project</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-image project-4"></div>
+                <div class="project-info">
+                    <span class="project-category" data-i18n="project4.category">IT Support</span>
+                    <h3 class="project-title" data-i18n="project4.title">IT Assistant</h3>
+                    <p class="project-desc" data-i18n="project4.desc">AI-powered help desk solution</p>
+                </div>
+                <div class="project-overlay">
+                    <a href="#" class="project-link" data-i18n="project.view">View Project</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-image project-5"></div>
+                <div class="project-info">
+                    <span class="project-category" data-i18n="project5.category">Geospatial</span>
+                    <h3 class="project-title" data-i18n="project5.title">GIS Platform</h3>
+                    <p class="project-desc" data-i18n="project5.desc">Interactive mapping and spatial analysis</p>
+                </div>
+                <div class="project-overlay">
+                    <a href="#" class="project-link" data-i18n="project.view">View Project</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-image project-6"></div>
+                <div class="project-info">
+                    <span class="project-category" data-i18n="project6.category">Data Management</span>
+                    <h3 class="project-title" data-i18n="project6.title">Database System</h3>
+                    <p class="project-desc" data-i18n="project6.desc">Enterprise data platform solution</p>
+                </div>
+                <div class="project-overlay">
+                    <a href="#" class="project-link" data-i18n="project.view">View Project</a>
                 </div>
             </article>
         </div>
@@ -156,9 +213,11 @@
     <section class="contact" id="contact">
         <div class="contact-wrapper">
             <div class="contact-content">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title">Let's Create Something <span class="gradient-text">Amazing</span></h2>
-                <p class="contact-text">Ready to start your next project? I'd love to hear from you and discuss how we
+                <span class="section-tag" data-i18n="contact.tag">Get In Touch</span>
+                <h2 class="section-title" data-i18n="contact.title">Let's Create Something <span class="gradient-text"
+                        data-i18n="contact.title.highlight">Amazing</span></h2>
+                <p class="contact-text" data-i18n="contact.description">Ready to start your next project? I'd love to
+                    hear from you and discuss how we
                     can work together.</p>
                 <a href="mailto:hello@bai.com" class="contact-email">hello@bai.com</a>
                 <div class="social-links">
@@ -186,18 +245,18 @@
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder=" " required>
-                        <label for="name">Your Name</label>
+                        <label for="name" data-i18n="form.name">Your Name</label>
                     </div>
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder=" " required>
-                        <label for="email">Your Email</label>
+                        <label for="email" data-i18n="form.email">Your Email</label>
                     </div>
                     <div class="form-group">
                         <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
-                        <label for="message">Your Message</label>
+                        <label for="message" data-i18n="form.message">Your Message</label>
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">
-                        <span>Send Message</span>
+                        <span data-i18n="form.submit">Send Message</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
@@ -211,7 +270,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 Bai. Crafted with passion.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Bai. Crafted with passion.</p>
         </div>
     </footer>
 
